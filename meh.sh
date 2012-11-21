@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# written by Andre Kelpe, efeshundertelf at googlemail dot com
+# license: MIT
+
 # cron has no PATH, so let's fix that first
 export PATH=/bin:/usr/bin
 
