@@ -14,7 +14,7 @@ To make it a bit more interesting, the script will not take the photo
 immediately, but will sleep for a random number of minutes, so that you are not
 prepared for the photo.
 
-All photos are stored in *$(xdg-user-dir PICTURES)"/meh*. On a system with an English
+All photos are stored in *$(xdg-user-dir PICTURES)/meh*. On a system with an English
 locale, this translates to */home/you/Pictures/meh*.
 
 Have fun and smile more, b/c you are on camera :)
