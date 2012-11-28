@@ -9,6 +9,7 @@ export PATH=/bin:/usr/bin
 # if not run by root, use x.org conformant method to retrieve user pictures
 # directory, see http://freedesktop.org/wiki/Software/xdg-user-dirs
 if [ $(id -u) -ne 0 ]
+then
   DIR="$(xdg-user-dir PICTURES)"/meh
 else
   # where the script itself is stored
