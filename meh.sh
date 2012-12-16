@@ -38,6 +38,6 @@ mv 00000001.png $fname
 
 if [ $notify -eq 1 ]
 then
-    notify-send -i $DIR/$fname 'Gotcha' \
+    DISPLAY=:0.0 notify-send -i $DIR/$fname 'Gotcha' \
         "You've been meh-ed\! Have fun and smile more, b/c you're on camera :)"
 fi
