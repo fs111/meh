@@ -30,6 +30,7 @@ sleep $(expr $RANDOM % 60)m
 # we cannot give a filename to mplayer, that's whe we rename afterwards
 fname=$(date +"%s").png
 
-mplayer -vo png -frames 1 tv:// > /dev/null 2> /dev/null
+mplayer -vo png -frames 2 tv:// > /dev/null 2> /dev/null
 
-mv 00000001.png $fname
+rm 00000001.png # it takes a while for some cams to initialize
+mv 00000002.png $fname
