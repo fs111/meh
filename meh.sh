@@ -3,6 +3,8 @@
 # written by Andre Kelpe, efeshundertelf at googlemail dot com
 # license: MIT
 
+notify=1 # 1 = send a notification, 0 = don't
+
 # cron has no PATH, so let's fix that first
 export PATH=/bin:/usr/bin
 
@@ -33,3 +35,9 @@ fname=$(date +"%s").png
 mplayer -vo png -frames 1 tv:// > /dev/null 2> /dev/null
 
 mv 00000001.png $fname
+
+if [ $notify -eq 1 ]
+then
+    notify-send -i $DIR/$fname 'Gotcha' \
+        "You've been meh-ed\! Have fun and smile more, b/c you're on camera :)"
+fi
