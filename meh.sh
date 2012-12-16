@@ -3,6 +3,8 @@
 # written by Andre Kelpe, efeshundertelf at googlemail dot com
 # license: MIT
 
+notify=0 # 1 = send a notification, 0 = don't
+
 # cron has no PATH, so let's fix that first
 export PATH=/bin:/usr/bin
 
@@ -34,3 +36,10 @@ mplayer -vo png -frames 2 tv:// > /dev/null 2> /dev/null
 
 rm 00000001.png # it takes a while for some cams to initialize
 mv 00000002.png $fname
+
+if [ $notify -eq 1 ]
+then
+    DISPLAY=:0.0 notify-send -i $DIR/$fname 'Gotcha' \
+        "You've been meh-ed\! Have fun and smile more, b/c you're on camera :)"
+fi
+
